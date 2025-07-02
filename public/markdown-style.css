@@ -1,0 +1,94 @@
+/* ----------------------------------*/
+/* Markdowns                         */
+/* --------------------------------  */
+.markdown-body {
+margin-bottom: 40px;
+}
+.markdown-body p {
+font-style:normal;                                                 
+font-weight:normal;                                               
+color:#000000;                                                   
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.markdown-body a {
+  background-color: initial;
+}
+.markdown-body img {
+  border-style: none;
+  width:100%;
+  max-width:400px;
+  float:left;
+  margin:10px;
+  margin-bottom: 10px;
+}
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+.markdown-body strong {
+  font-weight: bold;
+}
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.markdown-body h1 {
+  font-size: 150%;
+}
+.markdown-body h2 {
+  font-size: 140%;
+}
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: bold;
+}
+.markdown-body h3 {
+   font-size: 130%;
+}
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: bold;
+}
+.markdown-body h4 {
+  font-size: 120%;
+}
+.markdown-body h5 {
+ font-size: 110%;
+}
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: bold;
+}
+.markdown-body h6 {
+  font-size: 100%;
+}
+.markdown-body hr {
+  color: black !important;
+  box-shadow: 1px 1px grey, 2px 2px grey, 3px 3px grey;
+}
+.markdown-body ul {
+  margin-left: 20px;
+}
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+.markdown-body table td,
+.markdown-body table th {
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  margin: 0;
+  overflow: visible; 
+  padding: 0.5em 1em; /* cell padding */
+}
+.markdown-body table td {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #cbcbcb;
+}

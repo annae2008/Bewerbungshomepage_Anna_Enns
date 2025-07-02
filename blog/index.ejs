@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
+<html>
+  <head>
+    <title>Bewerbungshomepage Anna Enns</title>
+    <meta name="AUTHOR" content="Anna Enns">
+    <meta name="COPYRIGHT" content="Copyright (c) 2024 by Anna Enns">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <meta name="DESCRIPTION" content="Dies ist die Bewerbungshomepage von Anna Enns">
+    <meta name ="KEYWORDS" content ="Bewerbungshomepage, Anna Enns, Bewerbung">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <!-- import the webpage's markdown-style -->
+    <link rel="stylesheet" href="/markdown-style.css" />
+  
+  </head>
+
+  <body onload="setTimeout(function() {setActiveMenu('#main_menu_item_blog');}, 1000);">
+    <div id="kopfbereich"></div>
+    <!-- Ende kopfbereich -->
+
+    <div id="navibereich"></div>
+    <!-- Ende navibereich -->
+<div id="textbereich">
+    <p><a id="main_menu_item_blog" href="/blog">ZURÜCK ZUM BLOG</a></p>   
+    <div class="markdown-body" id="blog">
+      <div class="title">
+          <%- date %> - <%- title %>
+      </div>
+      <p><%- description %></p>
+      <hr>
+      <%- post %>
+    </div>
+    <br />
+    </div><!-- Ende textbereich -->
+      <div id="fussbereich"></div>
+    <!-- Ende fussbereich -->
+    <div id="newsbereich"></div>
+    <!-- Ende newsbereich -->
+    <script>
+      $(window).on("load", function () {
+        load_content("navibereich", "content-navi.html");
+        load_content("newsbereich", "content-news.html");
+        load_content("fussbereich", "content-footer.html");
+        load_content("kopfbereich", "content-header.html");
+      });
+    </script>
+  </body>
+</html>

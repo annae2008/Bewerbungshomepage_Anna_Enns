@@ -1,0 +1,358 @@
+/* --------------------------------------        */
+/* Übergreifend / Body                           */
+/* --------------------------------------        */
+html,body {
+  background-image:url(../hintergrund.jpg) ; !Hintergrundbild verwenden;
+  background-repeat:no-repeat; !Hintergrundbild wird nicht wiederholt; 
+  background-size: cover;      !Parallax-Effekt - Hintergrundbild ist bildschirmfüllend; 
+  overflow:hidden;             !Alle Body-Scrollbalken verstecken;
+} 
+#kopfbereich {
+  
+  position:fixed;              !Position des Kopfbereics ist immer oben - FIX!;
+  top:0;                       !Position oben;
+  left:0;                      !Position ganz links;  
+  border: 1px solid #ccc       !Rahmenart und -farbe; 
+  background-color:rgb(176,226,255);            !Hintergrundfarbe; 
+  width:100%;                  !Breite des Kopfbereichs; 
+  height:100px;               !Höhe des Kopfbereichs;
+  z-index:2                    !Kopfbereich überlagert andere Bereiche;
+} 
+
+#navibereich {
+ position: fixed;               !Position des Navibereichs immer links! -Fix;
+ top: 100px;        !Position unterhalb des Kopfbereichs;
+ left:0;             !Position ganz links;
+ border: 1px solid #ccc;        !Rahmenart und -farbe;
+ background-color:rgb(0,191,255);  !Hintergrundfarbe;
+ width:200px;                   !reite des Navibereichs; 
+ min-height:750px;              !Minimal-Höhe des Navibereichs;
+ z-index:2;                       !Navibereich überlagert andere Bereiche; 
+}
+
+#textbereich {
+  
+  position:fixed;              !Position des Textbereichs immer in der Mitte!;
+  left:0;                      !Textbereich fängt ganz links an;
+  right:0;                     !Textbereich geht bis ganz rechts;
+  top:100px;                   !Außenabstand zum Kopfbereich;
+  padding-left:210px;          !Innenabstand zum Menü;
+  padding-right:210px;         !Innenabstand zum Newsbericht; 
+  padding-top:20px;            !Innenabstand nach oben;
+  padding-bottom:60px;         !Innenabstand nach unten; 
+  border:1px solid #ccc;       !Rahmenart und -farbe;
+  height:100%;                 !Höhe des Textbereiches auf 100% eingestellt;
+  overflow-y: auto;            !Zeige Scrollbalken rechts, falls notwendig;
+  background-color:rgba(202,225,255); !Hintergrund ist weiß mit 50 %iger Transparenz;
+}
+
+#newsbereich {
+  position:fixed;              !Position des Newsbereichs immer rechts! -FIX; 
+  right:0px;                   !Rechtsausrichtung; 
+  top: 100px;                  !Position unterhalb des Kopfbereichs; 
+  border: 1px solid #ccc;      !Rahmenart und -farbe;
+  backhround-color:blue;       !Hintergrundfarbe;
+  width:200px;                 !Breite des Newsbereichs;
+  min-height:724px;            !Minimal-Höhe des Newsbereichs;
+  z-index:2;                   !Newsbereich überlagert andere Bereiche;
+} 
+
+#fussbereich {
+
+ position:fixed;              ! Position des Fußbereichs immer unten!;
+ bottom:0;                    ! Unten ausgerichtet!;
+ left:0;                      ! Position ganz links;
+ border: 1px solid #ccc;      ! Rahmenart und -farbe;
+ width: 100%;                 ! Breite des Fussbereichs;
+ background-color: rgb(0,178,238);      ! Hintergrundfarbe;
+ height:50px;                 ! Höhe des Fußbereichs;
+ z-index:2;                   ! Fußbereich überlagert andere Bereiche;
+ text-align:center;           ! Text wird im Fussbereich zentriert;
+ padding:10px;                ! Innenabstand einheitlich bei 10px;
+}
+
+
+/*  ----------------------------------------- */
+/*  Schriftformatierung                       */
+/*  ----------------------------------------- */
+
+p {
+font-family: "Oswald", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+color:#000000;                                                     ! Festlegung des Schriftfarbe;
+}
+.title {
+font-family: "Montserrat", sans-serif;
+font-size:14pt;                                                  ! Festlegung des Schriftgröße;
+font-weight:700;                                                  ! Festlegung der Fettschrift;
+}
+.header-title {
+font-family: "Oswald", sans-serif;
+font-size:28pt;                                                  ! Festlegung des Schriftgröße;
+font-weight:700;                                                  ! Festlegung der Fettschrift;
+text-align:center;
+}
+.footer-text {
+margin:0;
+padding:5px;
+line-height:18px;
+font-size:90%;           ! Festlegung des Schriftgröße;
+font-weight:bold;        ! Festlegung der Fettschrift;
+color: rgba(0,0,0,0.5);  ! Festlegung der Schriftfarbe (hier schwarz);
+text-decoration:none;         ! Keinen Unterstrich unterhalb des Menütitels;
+text-transform:uppercase;     ! Verwende Großbuchstaben;
+}
+ 
+.footer-text > a:hover {
+ 
+     font-weight:700;  ! Festlegung der Fettschrift für Montserrat, ansonsten bold einstellen;
+     font-style:oblique;     ! Festlegung der Kursiv-Schrift;
+     color: rgba(255,255,255,1);   ! Festlegung des Schriftfarbe (weiß);
+}
+ 
+/* -----------------------------------------   */
+/* -----Formatierung der Links----------------- */
+/* -----------------------------------------   */
+a.link {
+  padding-top: 4px;
+  color: rgba(255,255,255,0.5);
+  font-weight:bold;
+  transition: all 0.3s ease-out 0s; ! Definition des Übergangs zu Hover;
+  text-decoration:none;           ! Kein Unterstrich unterhalb des Titel;
+  text-shadow: 1px 1px 1px black; ! Festlegung des Text-Shadows;
+}
+
+a.link_black {
+   padding-top: 4px;
+   color: rgba(0,0,0,0.5);
+   font-weight:bold;
+   transition: all 0.3s ease-out 0s; ! Definition des Übergangs zu Hover;
+   text-decoration:none;		! Kein Unterstrich unterhalb des Titels;
+   text-shadow: 1px 1px 1px grey; ! Festlegung des Text-Shadows (Schatten);
+}
+
+
+/*  ----------------------------------------- */
+/*  Bildformatierung                       */
+/*  ----------------------------------------- */
+.header-image {
+  content:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgdXhwtHuB18PbeQtRP8xDrBtYA_Tg_-A_kw&s);
+  width:120px;
+  float:left;
+  margin:5px;
+  
+}
+
+/*  -----------------------------------------        */
+/*  Menüformatierung                                 */
+/*  -----------------------------------------        */
+
+/*  Linkformatierung für das Menü übergreifend       */
+
+.naviformat a, button {
+  	font-family: 'Montserrat', sans-serif;
+  	text-transform:uppercase;	! Verwende Großbuchstaben;
+font-size:90%;            	! Festlegung des Schriftgröße;
+	font-weight:700;		      ! Festlegung Fettschrift für Montserrat;
+	color: rgb(0,0,0);		! Festlegung des Schriftfarbe (schwarz);
+	display: block;			! Art der Anzeige als Blockelement;
+	transition: all 0.3s ease-out 0s; ! Definition Übergang von Normal zu Hover;
+	text-decoration:none;		! Keinen Unterstrich unterhalb des Menütitels;
+  	line-height: 20px;		! Höhe der Zeile wird festgelegt;
+  	padding: 5px 5px;			! Innenabstand nach links/rechts/oben/unten;
+}
+
+/*  Formatierung des Hauptmenüs (mainnav)                  */
+
+.mainnav {
+	text-align:right;          ! Textausrichtung rechtbündig;
+	list-style-type: none;     ! es werden keine Aufzählungszeichen dargestellt;
+	margin: 20px 5px;          ! Abstände nach oben/unten und rechts/links;
+}
+
+.mainnav > li {
+	float:none;	! Menüpunkte untereinander, bei float:left, nebeneinander;
+}				
+
+.mainnav > li > a {
+	padding-right:5px;		! Innenabstand nach rechts;
+}
+
+/*  Formatierung des aktiven Hauptmenüpunkts */
+
+.mainnav > li > a.active {
+	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
+	text-shadow: 1px 1px black, 2px 2px grey, 3px 3px 	#696969; ! Text-Schatten;
+  	color:rgb(0,0,205);	! Festlegung des Schriftfarbe;
+}
+
+/*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
+
+.mainnav > li > a:hover {
+
+	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
+	font-style:italic;	! Festlegung der Kursiv-Schrift;
+	text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; ! Text-Schatten;
+  	background-color:rgb(245,245,220);   ! Hintergrundfarbe;
+}
+
+/*  -----------------------------------------        */
+/*  Für Teaser (Blickfang)             	        */
+/*  -----------------------------------------        */
+.teaser {
+	font-weight:bold;				! setze Schriftart und -gewicht;
+	font-family:'Montserrat', sans-serif;
+	padding: 5px 5px;				! Innenabstand für den Teaser;
+	margin: 0 2px 4px 2px;			! Außenabstand nach unten zum nächsten Teaser;
+	border-bottom: 0px solid #ccc;		! unten gibt es eine Begrenzungslinie;
+}
+.teaser_date {
+	font-size:90%;                           		 ! etwas kleiner als die Standardschrift;
+}
+.teaser_title {
+	font-size:150%;                           		! etwas größer als die Standardschrift;
+	line-height:140%;
+}
+.teaser_text {
+        line-height: 400%;                          		 ! Anpassung der Zeilenhöhe;
+}
+a.teaser_link {
+   padding-top: 4px;
+   color:black;
+}
+.teaser_border {
+  color: #333;
+  border: 2px solid #000000;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Kontakt-Formular                                                           */
+/* -------------------------------------------------------------------------- */
+/* Als Standard wird alles zentriert, sieht besser aus */
+#contact-formular {
+        text-align:center;
+}
+/* Definition der Felder des Kontaktformular */
+#contact-formular input[type="text"], #contact-formular textarea, #contact-formular 
+input[type="email"] {
+        color: #999999;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width:100%;
+        height:20px;
+        background:#f5f5f5;
+        border-radius:3px;
+        margin-bottom:20px;
+        border:0;
+        box-shadow: 0 0px 3px rgba(0, 0, 0, 0.22) inset;
+        transition: all 0.2s linear;
+ }
+#contact-formular input[type="checkbox"] {
+        margin-bottom:10px;
+        vertical-align:middle;
+}
+#contact-formular textarea  {
+        height: 250px;
+        vertical-align:top;
+}
+#contact-formular input[type=text]:focus, #contact-formular input[type="textarea"]:focus, #contact-formular input[type=email]:focus {
+        background-color: #e1e1e1;
+}
+/* Button im Kontaktformular formatieren */
+#contact-formular input[type="submit"] {
+        color:#22222;
+        background-color:grey;
+        text-transform:uppercase;
+        padding:10px 15px;
+        letter-spacing:0;
+        line-height:14px;
+        cursor:pointer;
+        border-radius:3px;
+        transition:all 0.3s ease 0s;
+        text-align:center;
+}
+/*  Definition der Tabelle für das Formular */
+.form-table {
+padding-right: 10px; 
+margin-left: auto; 
+margin-right: auto; 
+border="0";
+cellspacing="1";
+cellpadding="2";
+width:50%;
+}
+
+/* Definition der Labels im Formular */
+.form-label {
+        vertical-align:top;
+        padding-right:10px;
+        width:95%;
+        font-weight:bold;
+}
+	.form-field {
+        vertical-align:top;
+        width:95%;
+}
+.form-label-kontakt {
+        vertical-align:top;
+        padding-right:10px;
+        width:50%;
+        font-weight:bold;
+}
+.form-field-kontakt {
+        vertical-align:top;
+        text-align:left;
+        width:50%;
+}
+.form-submit {
+padding-top:25px;
+text-align:center;
+}
+
+/* ----------------------------------*/
+/* Der Blog                          */
+/* --------------------------------  */
+#blog {
+  top:200px;                 
+  padding-left:10px;        
+  padding-right:10px;
+  padding-top:10px;          
+  padding-bottom:10px;       
+}
+.post {
+  font-size:130%;
+  background-color: yellow;
+  display: inline-block;
+  width: 95%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+.code-badge {
+  border-radius: 0px !important;
+  padding: 0px !important;
+  background: yellow !important;
+  color: white !important;
+  font-size: 15px !important;
+  padding-left: 10px !important;
+  text-transform: uppercase;
+  padding-top: 3px !important;
+}
+ 
+
+
+
+
+
+
+
+
+ 
